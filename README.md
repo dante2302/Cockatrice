@@ -25,7 +25,7 @@ To raise other issues, use the respective repositories: [Magic-Token](https://gi
 
 # Cockatrice
 
-Cockatrice is an open-source, multiplatform program for playing tabletop card games over a network. The program's server design prevents users from manipulating the game for unfair advantage. The client also provides a single-player mode, which allows users to brew while offline. This project uses C++ and the Qt5 libraries.<br>
+Cockatrice is an open-source, multiplatform program for playing tabletop card games over a network. The program's server design prevents users from manipulating the game for unfair advantage. The client also provides a single-player mode, which allows users to brew while offline. This project uses C++ and the Qt libraries.<br>
 
 
 # Download [![Cockatrice Eternal Download Count](https://img.shields.io/github/downloads/cockatrice/cockatrice/total.svg)](https://tooomm.github.io/github-release-stats/?username=Cockatrice&repository=Cockatrice)
