@@ -8,20 +8,20 @@ git push -d origin --REPLACE-WITH-BETA-LIST--
 include different targets -->
 <pre>
 <b>Pre-compiled binaries we serve:</b>
- - <kbd>Windows 7+</kbd>
  - <kbd>Windows 10+</kbd>
- - <kbd>macOS 10.15+</kbd> ("Catalina")
+ - <kbd>Windows 7+</kbd>
  - <kbd>macOS 12+</kbd> ("Monterey")
- - <kbd>Ubuntu 18.04 LTS</kbd> ("Bionic Beaver")
- - <kbd>Ubuntu 20.04 LTS</kbd> ("Focal Fossa")
- - <kbd>Ubuntu 22.04 LTS</kbd> ("Jammy Jellyfish")
+ - <kbd>macOS 10.15+</kbd> ("Catalina")
  - <kbd>Ubuntu 23.04</kbd> ("Lunar Lobster")
- - <kbd>Debian 11</kbd> ("Bullseye")
+ - <kbd>Ubuntu 22.04 LTS</kbd> ("Jammy Jellyfish")
+ - <kbd>Ubuntu 20.04 LTS</kbd> ("Focal Fossa")
+ - <kbd>Ubuntu 18.04 LTS</kbd> ("Bionic Beaver")
  - <kbd>Debian 12</kbd> ("Bookworm")
- - <kbd>Fedora 37</kbd>
+ - <kbd>Debian 11</kbd> ("Bullseye")
  - <kbd>Fedora 38</kbd>
-<kbd>We are also packaged in Arch Linux's official community repository, courtesy of @FFY00</kbd></i>
-<kbd>General Linux support is available via a flatpak package (Flathub)</kbd></i>
+ - <kbd>Fedora 37</kbd>
+<kbd>We are also packaged in Arch Linux's official community repository, courtesy of @FFY00</kbd>
+<kbd>General Linux support is available via a flatpak package at <a href="https://flathub.org/apps/io.github.Cockatrice.cockatrice">Flathub</a></kbd>
 </pre>
 
 
@@ -81,10 +81,9 @@ Remove empty headers when done.
 
 
 ## Translations
-- **Thanks for over 300 people contributing to 20+ different languages up to now!**
-- Without the help of the community we couldn't offer that great language support... keep up the good work!
-- It's actually very easy to join and help for yourself - find out more here:
-    - [Help us Translate Cockatrice into your native language!](https://github.com/Cockatrice/Cockatrice/wiki/Translation-FAQ)
+**Thanks for over 300 people contributing to 20+ different languages up to now!**<br>
+Without the help of the community we couldn't offer that diverse localization support... keep up the good work!<br>
+It's actually very easy to join yourself - [Help us Translate Cockatrice into your native language!](https://github.com/Cockatrice/Cockatrice/wiki/Translation-FAQ)
 
 
 ## Special Thanks
