@@ -18,7 +18,7 @@
 <br><pre>
 <b>To get started with Cockatrice &#8674; [view our webpage](https://cockatrice.github.io/)</b><br>
 <b>To get support, or suggest changes for the app &#8674; [file an issue](https://github.com/Cockatrice/Cockatrice/issues) ([How?](https://github.com/Cockatrice/Cockatrice/wiki/How-to-Create-a-GitHub-Ticket-Regarding-Cockatrice))</b>
-<b>To help with development, see how to [get involved](#get-involved--)</b><br>
+<b>To help with development, see how to [get involved](#get-involved-)</b><br>
 To raise related issues, use the respective repos: [Token](https://github.com/Cockatrice/Magic-Token) / [Spoiler](https://github.com/Cockatrice/Magic-Spoiler) / [Webpage](https://github.com/Cockatrice/cockatrice.github.io)
 </pre><br>
 
@@ -26,8 +26,8 @@ To raise related issues, use the respective repos: [Token](https://github.com/Co
 # Cockatrice
 
 Cockatrice is an open-source, multiplatform program for playing tabletop card games over a network. The program's server design prevents users from manipulating the game for unfair advantage. The client also provides a single-player mode, which allows users to brew while offline.<br><br>
-This project uses C++ and the Qt libraries.<br>
-First work on a webclient with Typescript was started as well.<br>
+This project uses <kbd>C++</kbd> and the <kbd>Qt</kbd> libraries.<br>
+First work on a webclient with <kbd>Typescript</kbd> was started as well.<br>
 
 
 # Download [![Cockatrice Eternal Download Count](https://img.shields.io/github/downloads/cockatrice/cockatrice/total.svg)](https://tooomm.github.io/github-release-stats/?username=Cockatrice&repository=Cockatrice)
@@ -48,12 +48,14 @@ Downloads are available for full releases and the current beta version in develo
 Join our [Discord community](https://discord.gg/3Z9yzmA) to connect with the project developers or fellow users of the app. Come here to talk about the application, features, or just to hang out.<br>
 <b>For support regarding specific servers, please contact that server's admin or forum for support rather than asking here.</b><br>
 
-To contribute code to the project, please review [the guidelines](https://github.com/Cockatrice/Cockatrice/blob/master/.github/CONTRIBUTING.md).
+To <b>contribute</b> code to the project, please review our [guidelines](https://github.com/Cockatrice/Cockatrice/blob/master/.github/CONTRIBUTING.md).<br>
 We maintain two tags for contributors to find issues to work on:
-- [Good first issue](https://github.com/Cockatrice/Cockatrice/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22Good%20first%20issue%22%20): issues tagged in this way provide a simple way to get started. They don't require much experience to be worked on.
-- [Help wanted](https://github.com/Cockatrice/Cockatrice/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22Help%20Wanted%22%20): This tag is used for issues that we are looking for a contributor to work on. Often this is for feature suggestions we are willing to accept, but don't have the time to work on ourselves.
+- [![Good first issue](https://img.shields.io/github/issues/cockatrice/cockatrice/Good%20first%20issue)](https://github.com/Cockatrice/Cockatrice/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+first+issue%22)<br>
+Issues tagged in this way provide a simple way to get started. They don't require much experience to be worked on.
+- [![Help wanted](https://img.shields.io/github/issues/cockatrice/cockatrice/Help%20wanted)](https://github.com/Cockatrice/Cockatrice/issues?q=is%3Aopen+is%3Aissue+label%3A%22Help+wanted%22)<br>
+This tag is used for issues that we are looking for a contributor to work on. Often this is for feature suggestions we are willing to accept, but don't have the time to work on ourselves.
 
-For both tags, we're willing to provide help to contributors in showing them where and how they can make changes, as well as code review for changes they submit.
+For both tags, we're willing to provide help to contributors in showing them where and how they can make changes, as well as code review for changes they submit. There are also our [![Hacktoberfest](https://img.shields.io/github/issues/cockatrice/cockatrice/Hacktoberfest)](https://github.com/Cockatrice/Cockatrice/issues?q=is%3Aopen+is%3Aissue+label%3AHacktoberfest) ...
 
 We try to be responsive to new issues. We'll provide advice on how best to implement a feature; alternately, we can show you where the codebase is doing something similar before you get too far along.
 
@@ -84,28 +86,31 @@ Dependencies: *(for minimum requirements search our [CMake file](https://github.
 - [protobuf](https://github.com/protocolbuffers/protobuf)
 - [CMake](https://www.cmake.org/)
 
-Oracle can optionally use zlib and xz to load compressed files:
+Oracle can optionally use <kbd>xz</kbd> and <kbd>zlib</kbd> to load compressed files:
 - [xz](https://tukaani.org/xz/)
 - [zlib](https://www.zlib.net/)
+<br>
 
-To compile:
+**Basic compilation steps:**
 
     mkdir build
     cd build
     cmake ..
     make
 
-You can then run
+You can then
 
-    make install
+ - create a Cockatrice installation inside the `release` folder:
 
-to get a cockatrice installation inside the `release` folder, or:
+       make install
 
-    make package
+ - or make a system-specific installation package:
 
-to create a system-specific installation package.
+       make package
 
-The following flags can be passed to `cmake`:
+**Detailed compiling instructions for various systems can be found on the Cockatrice wiki under [Compiling Cockatrice](https://github.com/Cockatrice/Cockatrice/wiki/Compiling-Cockatrice).**
+
+The following flags can be passed to <kbd>CMake</kbd>:
 
 - `-DWITH_SERVER=1` Whether to build the server (default 0 = no).
 - `-DWITH_CLIENT=0` Whether to build the client (default 1 = yes).
@@ -119,9 +124,9 @@ The following flags can be passed to `cmake`:
 
 # Run
 
-`Cockatrice` is the game client<br>
-`Oracle` fetches card data<br>
-`Servatrice` is the server<br>
+<kbd>Cockatrice</kbd> is the game client<br>
+<kbd>Oracle</kbd> fetches card data<br>
+<kbd>Servatrice</kbd> is the server<br>
 
 **Servatrice Docker container**
 
