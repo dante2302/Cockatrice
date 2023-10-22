@@ -16,10 +16,10 @@
 ---
 
 <br><pre>
-<b>To get started, &#8674; [view our webpage](https://cockatrice.github.io/)</b><br>
+<b>To get started with Cockatrice &#8674; [view our webpage](https://cockatrice.github.io/)</b><br>
 <b>To get support, or suggest changes for the app &#8674; [file an issue](https://github.com/Cockatrice/Cockatrice/issues) ([How?](https://github.com/Cockatrice/Cockatrice/wiki/How-to-Create-a-GitHub-Ticket-Regarding-Cockatrice))</b>
 <b>To help with development, see how to [get involved](#get-involved--)</b><br>
-To raise other issues, use the respective repositories: [Magic-Token](https://github.com/Cockatrice/Magic-Token) / [Magic-Spoiler](https://github.com/Cockatrice/Magic-Spoiler) / [Webpage](https://github.com/Cockatrice/cockatrice.github.io)
+To raise related issues, use the respective repos: [Token](https://github.com/Cockatrice/Magic-Token) / [Spoiler](https://github.com/Cockatrice/Magic-Spoiler) / [Webpage](https://github.com/Cockatrice/cockatrice.github.io)
 </pre><br>
 
 
