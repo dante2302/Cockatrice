@@ -79,8 +79,6 @@ Check out our [Translator FAQ](https://github.com/Cockatrice/Cockatrice/wiki/Tra
 
 # Build [![CI Desktop](https://github.com/Cockatrice/Cockatrice/actions/workflows/desktop-build.yml/badge.svg?branch=master&event=push)](https://github.com/Cockatrice/Cockatrice/actions/workflows/desktop-build.yml?query=branch%3Amaster+event%3Apush) [![CI Web](https://github.com/Cockatrice/Cockatrice/actions/workflows/web-build.yml/badge.svg?branch=master&event=push)](https://github.com/Cockatrice/Cockatrice/actions/workflows/web-build.yml?query=branch%3Amaster+event%3Apush)
 
-**Detailed compiling instructions can be found on the Cockatrice wiki under [Compiling Cockatrice](https://github.com/Cockatrice/Cockatrice/wiki/Compiling-Cockatrice)**
-
 Dependencies: *(for minimum requirements search our [CMake file](https://github.com/Cockatrice/Cockatrice/blob/master/CMakeLists.txt))*
 - [Qt](https://www.qt.io/developers/)
 - [protobuf](https://github.com/protocolbuffers/protobuf)
@@ -100,16 +98,17 @@ Oracle can optionally use <kbd>xz</kbd> and <kbd>zlib</kbd> to load compressed f
 
 You can then
 
- - create a Cockatrice installation inside the `release` folder:
+ - Create a Cockatrice installation inside the `release` folder:
 
        make install
 
- - or make a system-specific installation package:
+ - Or make a system-specific installation package:
 
        make package
 
 **Detailed compiling instructions for various systems can be found on the Cockatrice wiki under [Compiling Cockatrice](https://github.com/Cockatrice/Cockatrice/wiki/Compiling-Cockatrice).**
 
+<br>
 The following flags can be passed to <kbd>CMake</kbd>:
 
 - `-DWITH_SERVER=1` Whether to build the server (default 0 = no).
