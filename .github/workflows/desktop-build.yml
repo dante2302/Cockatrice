@@ -85,45 +85,53 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # these names correspond to the files in .ci/$distro
+        # these names correspond to the files in .ci/$distro$target
         include:
-          - distro: ArchLinux
+          - distro: Arch
             package: skip # we are packaged in arch already
             allow-failure: yes
 
-          - distro: Debian11
+          - distro: Debian
+            target: 11
             package: DEB
 
-          - distro: Debian12
+          - distro: Debian
+            target: 12
             package: DEB
 
-          - distro: Fedora37
+          - distro: Fedora
+            target: 37
             package: RPM
 
-          - distro: Fedora38
+          - distro: Fedora
+            target: 38
             package: RPM
 
-          - distro: UbuntuBionic
+          - distro: Ubuntu
+            target: 18.04
             package: DEB
 
-          - distro: UbuntuFocal
+          - distro: Ubuntu
+            target: 20.04
             package: DEB
             test: skip # UbuntuFocal has a broken qt for debug builds
 
-          - distro: UbuntuJammy
+          - distro: Ubuntu
+            target: 22.04
             package: DEB
             test: skip # running tests on all distros is superfluous
 
-          - distro: UbuntuLunar
+          - distro: Ubuntu
+            target: 23.04
             package: DEB
 
-    name: ${{matrix.distro}}
+    name: ${{matrix.distro}} ${{matrix.target}}
     needs: configure
     runs-on: ubuntu-latest
     continue-on-error: ${{matrix.allow-failure == 'yes'}}
     env:
-      NAME: ${{matrix.distro}}
-      CACHE: /tmp/${{matrix.distro}}-cache # ${{runner.temp}} does not work?
+      NAME: ${{matrix.distro}}_${{matrix.target}}
+      CACHE: /tmp/${{matrix.distro}}_${{matrix.target}}-cache # ${{runner.temp}} does not work?
       # cache size over the entire repo is 10Gi link:
       # https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows#usage-limits-and-eviction-policy
       CCACHE_SIZE: 200M
@@ -143,11 +151,11 @@ jobs:
           timestamp: ${{steps.cache_timestamp.outputs.timestamp}}
         with:
           path: ${{env.CACHE}}
-          key: docker-${{matrix.distro}}-cache-${{env.timestamp}}
+          key: docker-${{matrix.distro}}_${{matrix.target}}-cache-${{env.timestamp}}
           restore-keys: |
-            docker-${{matrix.distro}}-cache-
+            docker-${{matrix.distro}}_${{matrix.target}}-cache-
 
-      - name: Build ${{matrix.distro}} Docker image
+      - name: Build ${{matrix.distro}} ${{matrix.target}} Docker image
         shell: bash
         run: source .ci/docker.sh --build
 
@@ -155,7 +163,7 @@ jobs:
         if: matrix.test != 'skip'
         shell: bash
         env:
-          distro: '${{matrix.distro}}'
+          distro: '${{matrix.distro}}_${{matrix.target}}'
         run: |
           source .ci/docker.sh
           RUN --server --debug --test --ccache "$CCACHE_SIZE" --parallel 2
@@ -166,8 +174,8 @@ jobs:
         shell: bash
         env:
           BUILD_DIR: build
-          SUFFIX: '-${{matrix.distro}}'
-          distro: '${{matrix.distro}}'
+          SUFFIX: '-${{matrix.distro}}-${{matrix.target}}'
+          distro: '${{matrix.distro}}_${{matrix.target}}'
           type: '${{matrix.package}}'
         run: |
           source .ci/docker.sh
@@ -179,7 +187,7 @@ jobs:
         if: matrix.package != 'skip'
         uses: actions/upload-artifact@v3
         with:
-          name: ${{matrix.distro}}-package
+          name: ${{matrix.distro}}${{matrix.target}}-package
           path: ${{steps.build.outputs.path}}
           if-no-files-found: error
 
