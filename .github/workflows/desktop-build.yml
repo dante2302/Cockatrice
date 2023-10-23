@@ -206,7 +206,7 @@ jobs:
             type: Debug
             do_tests: 1
 
-          - target: 10.15_Catalina
+          - target: 10.15
             os: macos-11
             xcode: 11.7 # allows using macOS 10.15 SDK
             qt_version: 6.2.* # LTS (is compatible with 10.14 and 10.15)
@@ -216,7 +216,7 @@ jobs:
             make_package: 1
             use_old_protobuf: 1
 
-          - target: 12_Monterey
+          - target: 12
             os: macos-12
             xcode: 13.3
             qt_version: homebrew
@@ -224,7 +224,7 @@ jobs:
             do_tests: 1
             make_package: 1
 
-          - target: 13_Ventura
+          - target: 13
             os: macos-13
             xcode: 14.3.1
             qt_version: homebrew
@@ -290,7 +290,7 @@ jobs:
         if: matrix.make_package
         uses: actions/upload-artifact@v3
         with:
-          name: macOS-${{matrix.target}}-dmg
+          name: macOS-${{matrix.target}}-installer
           path: ${{steps.build.outputs.path}}
           if-no-files-found: error
 
