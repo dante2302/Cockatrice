@@ -9,7 +9,7 @@ on:
       - '.github/workflows/translations-*.yml'
 
 jobs:
-  format:
+  ClangFormat:
     runs-on: ubuntu-22.04
 
     steps:
